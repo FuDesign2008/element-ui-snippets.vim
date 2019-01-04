@@ -1,0 +1,96 @@
+extends vue
+
+snippet el-checkbox "el-checkbox"
+<el-checkbox
+  v-model="isChecked"
+  :disabled="false"
+  @change="onChange"
+  >备选项</el-checkbox>
+endsnippet
+
+snippet el-checkbox-group "el-checkbox-group"
+<el-checkbox-group
+  v-model="checkList"
+  :min="1"
+  :max="3"
+  @change="onChange"
+  >
+  <el-checkbox
+    label="value1
+    >复选框1</el-checkbox>
+  <el-checkbox
+    label="value2"
+    >复选框2</el-checkbox>
+  <el-checkbox
+    label="value3"
+    disabled
+    >复选框禁用</el-checkbox>
+  <el-checkbox
+    label="value4"
+    disabled
+    >选中并禁用</el-checkbox>
+</el-checkbox-group>
+endsnippet
+
+snippet el-checkbox-for "el-checkbox-group with v-for"
+<el-checkbox-group
+  v-model="checkList"
+  :min="1"
+  :max="3"
+  @change="onChange"
+  >
+  <el-checkbox
+    v-for="item in checkOptions"
+    :label="item.value"
+    :key="item.value"
+    :disabled="item.disabled"
+    >{{item.text}}</el-checkbox>
+</el-checkbox-group>
+endsnippet
+
+snippet el-checkbox-button "el-checkbox-group as button"
+<el-checkbox-group
+  v-model="checkList"
+  :min="1"
+  :max="3"
+  size="small"
+  @change="onChange"
+  >
+  <el-checkbox-button
+    label="value1
+    >复选框1</el-checkbox-button>
+  <el-checkbox-button
+    label="value2"
+    >复选框2</el-checkbox-button>
+  <el-checkbox-button
+    label="value3"
+    disabled
+    >复选框禁用</el-checkbox-button>
+  <el-checkbox-button
+    label="value4"
+    disabled
+    >选中并禁用</el-checkbox-button>
+</el-checkbox-group>
+endsnippet
+
+snippet el-checkbox-button-for "el-checkbox-group as button with v-for"
+<el-checkbox-group
+  v-model="checkList"
+  :min="1"
+  :max="3"
+  size="small"
+  @change="onChange"
+  >
+  <el-checkbox-button
+    v-for="item in checkOptions"
+    :label="item.value"
+    :key="item.value"
+    :disabled="item.disabled"
+    >{{item.text}}</el-checkbox-button>
+</el-checkbox-group>
+endsnippet
+
+
+
+
+

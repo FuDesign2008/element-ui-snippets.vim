@@ -2,7 +2,7 @@
  * @prettier
  */
 module.exports = {
-  arrowParens: 'always',
+  arrowParens: 'as-needed',
   printWidth: 80,
   semi: false,
   singleQuote: true,
