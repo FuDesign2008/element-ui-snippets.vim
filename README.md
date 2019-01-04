@@ -1,5 +1,5 @@
-# fu-element-ui-snippets.vim
-My snippets for element ui
+# element-ui-snippets.vim
+Snippets for element ui
 
 
 ## Next
