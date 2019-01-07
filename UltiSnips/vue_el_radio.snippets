@@ -1,6 +1,6 @@
 extends vue
 
-snippet el-radio "el-radio"
+snippet elradio "el-radio"
 <el-radio
   v-model="radio"
   :label="value"
@@ -10,7 +10,7 @@ snippet el-radio "el-radio"
   >备选项</el-radio>
 endsnippet
 
-snippet el-radio-group "el-radio-group"
+snippet elradiogroup "el-radio-group"
 <el-radio-group
   v-model="selectedValue"
   @change="onChange"
@@ -27,7 +27,7 @@ snippet el-radio-group "el-radio-group"
 </el-radio-group>
 endsnippet
 
-snippet el-radio-button "el-radio-button as group"
+snippet elradiobutton "el-radio-button as group"
 <el-radio-group
   v-model="selectedValue"
   @change="onChange"
