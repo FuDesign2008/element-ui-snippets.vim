@@ -1,0 +1,281 @@
+extends javascript
+
+snippet elupload "el-upload with multiple"
+export default {
+  data() {
+    // @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
+    this.acceptMimeTypes = ['image/*'].join(',')
+    return {
+      fileList: [
+        {
+          name: 'food.jpeg',
+          url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100',
+        },
+        {
+          name: 'food2.jpeg',
+          url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100',
+        },
+      ],
+    }
+  },
+  methods: {
+    /**
+     * @param {File} file
+     * @param {Array<File>} fileList
+     */
+    handleRemove(file, fileList) {
+      console.log(file, fileList)
+    },
+    /**
+     * @param {File} file
+     */
+    handlePreview(file) {
+      console.log(file)
+    },
+    /**
+     * @param {File} file
+     * @param {Array<File>} fileList
+     */
+    handleExceed(files, fileList) {
+      this.$message.warning(`当前限制选择 3 个文件，本次选择了 ${files.length} 个文件，共选择了 ${files.length + fileList.length} 个文件`)
+    },
+    /**
+     * @param {File} file
+     * @param {Array<File>} fileList
+     * @return {Promise}
+     */
+    beforeRemove(file, fileList) {
+      return this.$confirm(`确定移除 ${file.name}？`)
+    },
+    /**
+     * @param {File} file
+     * @return {Boolean}
+     */
+    beforeUpload(file) {
+      console.log(file)
+      // TODO check file type and file size
+    },
+  },
+}
+endsnippet
+
+snippet eluploadav "el-upload for avatar"
+export default {
+  data() {
+    // @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
+    this.acceptMimeTypes = ['image/*'].join(',')
+    return {
+      imageUrl: '',
+    }
+  },
+  methods: {
+    /**
+     * @param {Object} respone
+     * @param {File} file
+     */
+    handleAvatarSuccess(respone, file) {
+      this.imageUrl = URL.createObjectURL(file.raw)
+    },
+
+    /**
+     * @param {File} file
+     */
+    beforeAvatarUpload(file) {
+      const isJPG = file.type === 'image/jpeg'
+      const isLt2M = file.size / 1024 / 1024 < 2
+
+      if (!isJPG) {
+        this.$message.error('上传头像图片只能是 JPG 格式!')
+      }
+      if (!isLt2M) {
+        this.$message.error('上传头像图片大小不能超过 2MB!')
+      }
+      return isJPG && isLt2M
+    },
+  },
+}
+endsnippet
+
+
+snippet eluploadthumb "el-upload for thumbnail"
+export default {
+  data() {
+    // @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
+    this.acceptMimeTypes = ['image/*'].join(',')
+    return {
+      fileList: [
+        {
+          name: 'food.jpeg',
+          url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100',
+        },
+        {
+          name: 'food2.jpeg',
+          url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100',
+        },
+      ],
+    }
+  },
+  methods: {
+    /**
+     * @param {File} file
+     * @param {Array<File>} fileList
+     */
+    handleRemove(file, fileList) {
+      console.log(file, fileList)
+    },
+    /**
+     * @param {File} file
+     */
+    handlePreview(file) {
+      console.log(file)
+    },
+
+    /**
+     * @param {File} file
+     */
+    beforeUpload(file) {
+      console.log(file)
+    },
+
+    /**
+     * @param {File} file
+     * @param {Array<File>} fileList
+     * @return {Promise}
+     */
+    beforeRemove(file, fileList) {
+      return this.$confirm(`确定移除 ${file.name}？`)
+    },
+  },
+}
+endsnippet
+
+snippet eluploaddrag "el-upload with drag attribute"
+export default {
+  data() {
+    // @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
+    this.acceptMimeTypes = ['image/*'].join(',')
+    return {
+      fileList: [
+        {
+          name: 'food.jpeg',
+          url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100',
+        },
+        {
+          name: 'food2.jpeg',
+          url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100',
+        },
+      ],
+    }
+  },
+  methods: {
+    /**
+     * @param {File} file
+     * @param {Array<File>} fileList
+     */
+    handleRemove(file, fileList) {
+      console.log(file, fileList)
+    },
+    /**
+     * @param {File} file
+     */
+    handlePreview(file) {
+      console.log(file)
+    },
+    /**
+     * @param {File} file
+     * @param {Array<File>} fileList
+     */
+    handleExceed(files, fileList) {
+      this.$message.warning(`当前限制选择 3 个文件，本次选择了 ${files.length} 个文件，共选择了 ${files.length + fileList.length} 个文件`)
+    },
+    /**
+     * @param {File} file
+     * @param {Array<File>} fileList
+     * @return {Promise}
+     */
+    beforeRemove(file, fileList) {
+      return this.$confirm(`确定移除 ${file.name}？`)
+    },
+    /**
+     * @param {File} file
+     * @return {Boolean}
+     */
+    beforeUpload(file) {
+      console.log(file)
+      // TODO check file type and file size
+    },
+  },
+}
+endsnippet
+
+snippet eluploadcustom "el-upload with custom upload"
+export default {
+  data() {
+    // @see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
+    this.acceptMimeTypes = ['image/*'].join(',')
+    return {
+      fileList: [
+        {
+          name: 'food.jpeg',
+          url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100',
+        },
+        {
+          name: 'food2.jpeg',
+          url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100',
+        },
+      ],
+    }
+  },
+  methods: {
+    /**
+     * @param {File} file
+     * @param {Array<File>} fileList
+     */
+    handleRemove(file, fileList) {
+      console.log(file, fileList)
+    },
+    /**
+     * @param {File} file
+     */
+    handlePreview(file) {
+      console.log(file)
+    },
+    /**
+     * @param {File} file
+     * @param {Array<File>} fileList
+     */
+    handleExceed(files, fileList) {
+      this.$message.warning(`当前限制选择 3 个文件，本次选择了 ${files.length} 个文件，共选择了 ${files.length + fileList.length} 个文件`)
+    },
+    /**
+     * @param {File} file
+     * @param {Array<File>} fileList
+     * @return {Promise}
+     */
+    beforeRemove(file, fileList) {
+      return this.$confirm(`确定移除 ${file.name}？`)
+    },
+    /**
+     * @param {File} file
+     * @return {Boolean}
+     */
+    beforeUpload(file) {
+      console.log(file)
+      // TODO check file type and file size
+    },
+
+    submitUpload() {
+      this.$refs.upload.submit()
+    },
+
+    /**
+     * @param {File} file
+     * @param {Array<File>} fileList
+     */
+    uploadHttpRequest(file, fileList) {
+      // TODO
+    },
+  },
+}
+endsnippet
+
