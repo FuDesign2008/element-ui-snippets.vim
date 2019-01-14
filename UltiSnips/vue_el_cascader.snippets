@@ -1,0 +1,49 @@
+extends vue
+
+snippet elcascader "el-cascader"
+ <el-cascader
+  placeholder="请选择"
+  :options="cascaderOptions"
+  :show-all-levels="true"
+  :change-on-select="false"
+  v-model="selectedOptions"
+  @change="onCascaderChange"
+  />
+endsnippet
+
+
+snippet elcascaderfilter "el-cascader with filterable attribute"
+ <el-cascader
+  :options="cascaderOptions"
+  :show-all-levels="true"
+  :change-on-select="true"
+  placeholder="试试搜索：指南"
+  filterable
+  v-model="selectedOptions"
+  @change="onCascaderChange"
+  />
+endsnippet
+
+snippet elcascaderremote "el-cascader with loading remote data"
+ <el-cascader
+  placeholder="请选择"
+  :options="cascaderOptions"
+  :show-all-levels="true"
+  :change-on-select="false"
+  v-model="selectedOptions"
+  @change="onCascaderChange"
+  @active-item-change="onActiveItemChange"
+  />
+endsnippet
+
+snippet elcascaderprops "el-cascader mapping data with props attribute"
+ <el-cascader
+  placeholder="请选择"
+  :options="cascaderOptions"
+  :show-all-levels="true"
+  :change-on-select="false"
+  :props="cascaderPropsMap"
+  v-model="selectedOptions"
+  @change="onCascaderChange"
+  />
+endsnippet

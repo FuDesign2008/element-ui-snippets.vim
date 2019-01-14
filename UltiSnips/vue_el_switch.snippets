@@ -1,0 +1,23 @@
+extends vue
+
+snippet elswit "el-switch"
+<el-switch
+  v-model="isOn"
+  active-text="按月付费"
+  inactive-text="按年付费"
+  @change="onSwitchChange"
+  />
+endsnippet
+
+snippet elswitch "el-switch with most attributes"
+<el-switch
+  v-model="switchValue"
+  active-text="按月付费"
+  inactive-text="按年付费"
+  :active-value="100"
+  :inactive-value="0"
+  active-color="#13ce66"
+  inactive-color="#ff4949"
+  @change="onSwitchChange"
+  />
+endsnippet

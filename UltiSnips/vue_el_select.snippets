@@ -1,0 +1,142 @@
+extends vue
+
+snippet elselect "el-select"
+<el-select
+  v-model="selectedValue"
+  placeholder="请选择"
+  :disabled="false"
+  :clearable="false"
+  @change="onSelectChange"
+  >
+    <el-option
+      v-for="item in options"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value"
+      :disabled="item.disabled"
+      />
+</el-select>
+endsnippet
+
+snippet elselectmulti "el-select with multiple attribute"
+<el-select
+  v-model="selectedValue"
+  placeholder="请选择"
+  multiple
+  :multiple-limit="0"
+  :disabled="false"
+  :collapse-tags="false"
+  @change="onSelectChange"
+  >
+    <el-option
+      v-for="item in options"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value"
+      :disabled="item.disabled"
+      />
+</el-select>
+endsnippet
+
+snippet eloption "el-option"
+<el-option
+  v-for="item in options"
+  :key="item.value"
+  :label="item.label"
+  :value="item.value"
+  :disabled="item.disabled"
+  />
+endsnippet
+
+snippet eloptionslot "el-option with default slot"
+<el-option
+  v-for="item in options"
+  :key="item.value"
+  :value="item.value"
+  :disabled="item.disabled"
+  >
+  <span
+    style="float: left"
+    >{{item.lablel}}</span>
+  <span
+    style="float: right; color: #8492a6; font-size: 13px"
+    >{{ item.lablel2 }}</span>
+</el-option>
+endsnippet
+
+snippet eloptiongroup "el-option-group"
+ <el-option-group
+  v-for="group in optionGroupList"
+  :key="group.label"
+  :label="group.label"
+  >
+  <el-option
+    v-for="item in group.options"
+    :key="item.value"
+    :label="item.label"
+    :value="item.value"
+    :disabled="false"
+    />
+</el-option-group>
+endsnippet
+
+snippet  elselectfilte  "el-select with filterable"
+<el-select
+  v-model="selectedValue"
+  placeholder="请输入关键字"
+  :disabled="false"
+  :clearable="false"
+  filterable
+  @change="onSelectChange"
+  >
+    <el-option
+      v-for="item in options"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value"
+      :disabled="item.disabled"
+      />
+</el-select>
+endsnippet
+
+snippet  elselectfilter  "el-select with filter-method"
+<el-select
+  v-model="selectedValue"
+  placeholder="请输入关键字"
+  :disabled="false"
+  :clearable="false"
+  filterable
+  :filter-method="filterOptions"
+  @change="onSelectChange"
+  >
+    <el-option
+      v-for="item in options"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value"
+      :disabled="item.disabled"
+      />
+</el-select>
+endsnippet
+
+snippet elselectremote "el-select with remote-method"
+<el-select
+  v-model="selectedValue"
+  placeholder="请输入关键字"
+  :disabled="false"
+  :clearable="false"
+  filterable
+  remote
+  :loading="isLoadingRemoteQuery"
+  :remote-method="remoteQuery"
+  @change="onSelectChange"
+  >
+    <el-option
+      v-for="item in options"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value"
+      :disabled="item.disabled"
+      />
+</el-select>
+endsnippet
