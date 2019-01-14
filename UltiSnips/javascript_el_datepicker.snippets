@@ -1,7 +1,7 @@
 extends javascript
 
-snippet eldatepicker "picker-options for el-date-picker"
-pickerOptions: {
+snippet eldatepick "picker-options for el-date-picker"
+datePickerOptions: {
   disabledDate(time) {
     return time.getTime() > Date.now()
   },
@@ -28,8 +28,8 @@ pickerOptions: {
 }
 endsnippet
 
-snippet eldatepickers "picker-options for el-date-picker with daterange"
-pickerOptions: {
+snippet eldatepicke "picker-options for el-date-picker with daterange"
+dateRangePickerOptions: {
   shortcuts: [{
     text: '最近一周',
     onClick(picker) {
@@ -53,6 +53,31 @@ pickerOptions: {
       const start = new Date()
       start.setTime(start.getTime() - 3600 * 1000 * 24 * 90)
       picker.$emit('pick', [start, end])
+    },
+  }],
+}
+endsnippet
+
+snippet eldatepicker "picker-options for el-date-picker with datetime"
+dateTimePickerOpitons: {
+  shortcuts: [{
+    text: '今天',
+    onClick(picker) {
+      picker.$emit('pick', new Date())
+    },
+  }, {
+    text: '昨天',
+    onClick(picker) {
+      const date = new Date()
+      date.setTime(date.getTime() - 3600 * 1000 * 24)
+      picker.$emit('pick', date)
+    },
+  }, {
+    text: '一周前',
+    onClick(picker) {
+      const date = new Date()
+      date.setTime(date.getTime() - 3600 * 1000 * 24 * 7)
+      picker.$emit('pick', date)
     },
   }],
 }
