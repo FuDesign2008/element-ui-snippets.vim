@@ -1,0 +1,22 @@
+extends vue
+
+snippet elcolorpicke "el-color-picker"
+<el-color-picker
+  v-model="pickedColor"
+  :disabled="false"
+  size="small"
+  :show-alpha="false"
+  @change="onColorChange"
+/>
+endsnippet
+
+snippet elcolorpicker "el-color-picker with predefine"
+<el-color-picker
+  v-model="pickedColor"
+  :disabled="false"
+  size="small"
+  :show-alpha="false"
+  :predefine="predefinedColors"
+  @change="onColorChange"
+/>
+endsnippet
