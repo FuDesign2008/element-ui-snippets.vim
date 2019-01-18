@@ -15,42 +15,42 @@ export default {
       }
     }
 
-    const validatePass = (rule, value, callback) => {
+    const validatePassword = (rule, value, callback) => {
       if (value === '') {
         callback(new Error('请输入密码'))
       } else {
-        if (this.ruleForm.checkPass !== '') {
-          this.$refs.ruleForm.validateField('checkPass')
+        if (this.passwordForm.checkPassword !== '') {
+          this.$refs.passwordForm.validateField('checkPassword')
         }
         callback()
       }
     }
 
-    const validatePass2 = (rule, value, callback) => {
+    const validateCheckPassword = (rule, value, callback) => {
       if (value === '') {
         callback(new Error('请再次输入密码'))
-      } else if (value !== this.ruleForm.pass) {
+      } else if (value !== this.passwordForm.password) {
         callback(new Error('两次输入密码不一致!'))
       } else {
         callback()
       }
     }
     return {
-      ruleForm: {
-        pass: '',
-        checkPass: '',
+      passwordForm: {
+        password: '',
+        checkPassword: '',
         age: '',
       },
-      rules2: {
-        pass: [
+      passwordFormRules: {
+        password: [
           {
-            validator: validatePass,
+            validator: validatePassword,
             trigger: 'blur',
           },
         ],
-        checkPass: [
+        checkPassword: [
           {
-            validator: validatePass2,
+            validator: validateCheckPassword,
             trigger: 'blur',
           },
         ],
