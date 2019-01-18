@@ -11,7 +11,7 @@
     <el-input
       type="password"
       v-model="passwordForm.password"
-      autocomplete="off"
+      auto-complete="off"
       />
   </el-form-item>
   <el-form-item
@@ -21,7 +21,7 @@
     <el-input
       type="password"
       v-model="passwordForm.checkPassword"
-      autocomplete="off"
+      auto-complete="off"
       />
   </el-form-item>
   <el-form-item label="年龄" prop="age">

@@ -44,7 +44,7 @@ export default {
           },
           {
             validator: validateCheckPassword,
-            trigger: 'change',
+            trigger: 'blur',
           },
         ],
         age: [
