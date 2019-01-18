@@ -1,3 +1,6 @@
+// generate validators form elformvalidators snippets
+import { passwordValidators } from '/path/to/elFormValidators'
+
 export default {
 
   data() {
@@ -15,16 +18,6 @@ export default {
       }
     }
 
-    const validatePassword = (rule, value, callback) => {
-      if (value === '') {
-        callback(new Error('请输入密码'))
-      } else {
-        if (this.passwordForm.checkPassword !== '') {
-          this.$refs.passwordForm.validateField('checkPassword')
-        }
-        callback()
-      }
-    }
 
     const validateCheckPassword = (rule, value, callback) => {
       if (value === '') {
@@ -42,16 +35,16 @@ export default {
         age: '',
       },
       passwordFormRules: {
-        password: [
-          {
-            validator: validatePassword,
-            trigger: 'blur',
-          },
-        ],
+        password: passwordValidators,
         checkPassword: [
           {
-            validator: validateCheckPassword,
+            required: true,
+            message: '请再次输入密码',
             trigger: 'blur',
+          },
+          {
+            validator: validateCheckPassword,
+            trigger: 'change',
           },
         ],
         age: [

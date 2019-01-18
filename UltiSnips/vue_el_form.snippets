@@ -3,40 +3,40 @@ extends vue
 snippet elformpwd "el-form with password"
 <el-form
   status-icon
-  ref="ruleForm"
-  :model="ruleForm"
-  :rules="rules"
+  ref="passwordForm"
+  :model="passwordForm"
+  :rules="passwordFormRules"
   label-width="100px"
   >
   <el-form-item
     label="密码"
-    prop="pass">
+    prop="password">
     <el-input
       type="password"
-      v-model="ruleForm.pass"
+      v-model="passwordForm.password"
       autocomplete="off"
       />
   </el-form-item>
   <el-form-item
     label="确认密码"
-    prop="checkPass"
+    prop="checkPassword"
     >
     <el-input
       type="password"
-      v-model="ruleForm.checkPass"
+      v-model="passwordForm.checkPassword"
       autocomplete="off"
       />
   </el-form-item>
   <el-form-item label="年龄" prop="age">
-    <el-input v-model.number="ruleForm.age" />
+    <el-input v-model.number="passwordForm.age" />
   </el-form-item>
   <el-form-item>
     <el-button
       type="primary"
-      @click="submitForm('ruleForm')"
+      @click="submitForm('passwordForm')"
       >提交</el-button>
     <el-button
-      @click="resetForm('ruleForm')"
+      @click="resetForm('passwordForm')"
       >重置</el-button>
   </el-form-item>
 </el-form>
