@@ -4,6 +4,7 @@
   :model="passwordForm"
   :rules="passwordFormRules"
   label-width="100px"
+  @submit.native.prevent
   >
   <el-form-item
     label="密码"

@@ -66,12 +66,12 @@ function validatePassword(rule, value, callback) {
 }
 
 const passwordValidators = [
-  ...createCommonLengthValidators('密码', 'change', {
+  ...createCommonLengthValidators('密码', 'blur', {
     min: 8,
   }),
   {
     validator: validatePassword,
-    trigger: 'change',
+    trigger: 'blur',
   },
 ]
 

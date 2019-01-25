@@ -42,6 +42,7 @@ export default {
             message: '请再次输入密码',
             trigger: 'blur',
           },
+          ...passwordValidators,
           {
             validator: validateCheckPassword,
             trigger: 'blur',
