@@ -1,5 +1,4 @@
 <el-form
-  status-icon
   ref="passwordForm"
   :model="passwordForm"
   :rules="passwordFormRules"
