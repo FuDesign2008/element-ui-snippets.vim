@@ -2,7 +2,6 @@
 import { passwordValidators } from '/path/to/elFormValidators'
 
 export default {
-
   data() {
     const checkAge = (rule, value, callback) => {
       if (!value) {
@@ -17,7 +16,6 @@ export default {
         callback()
       }
     }
-
 
     const validateCheckPassword = (rule, value, callback) => {
       if (value === '') {
