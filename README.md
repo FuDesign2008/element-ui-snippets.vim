@@ -17,7 +17,7 @@ Snippets for element ui
 - Border 边框 ✅
 - Icon 图标 ✅
 - Button 按钮 ✅
-- Link 文字链接
+- Link 文字链接 ✅
 
 ### Form
 
@@ -57,9 +57,9 @@ Snippets for element ui
 
 ### Navigation
 
-- NavMenu 导航菜单
-- Tabs 标签页
-- Breadcrumb 面包屑
+- NavMenu 导航菜单 ✅
+- Tabs 标签页 ✅
+- Breadcrumb 面包屑 ✅
 - Dropdown 下拉菜单
 - Steps 步骤条
 
