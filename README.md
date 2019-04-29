@@ -60,8 +60,8 @@ Snippets for element ui
 - NavMenu 导航菜单 ✅
 - Tabs 标签页 ✅
 - Breadcrumb 面包屑 ✅
-- Dropdown 下拉菜单
-- Steps 步骤条
+- Dropdown 下拉菜单 ✅
+- Steps 步骤条 ✅
 
 ### Others
 
@@ -74,4 +74,4 @@ Snippets for element ui
 - Timeline 时间线
 - Divider 分割线
 - Calendar 日历
-  Image 图片
+- Image 图片
