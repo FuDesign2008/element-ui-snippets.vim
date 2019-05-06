@@ -1,6 +1,6 @@
 extends javascript
 
-snippet message '$message(options) from element-ui'
+snippet message "$message(options) from element-ui"
 this.$message({
   message: '这是一条成功消息',
   // success | warning | info | error
@@ -8,7 +8,7 @@ this.$message({
 })
 endsnippet
 
-snippet messagevnode '$message(options) use vnode'
+snippet messagevnode "$message(options) use vnode"
 const h = this.$createElement
 const vnodeMessage = h('p', null, [
   h('span', null, '内容可以是 '),
@@ -28,7 +28,7 @@ this.$message({
 })
 endsnippet
 
-snippet messagehtml '$message(options) use html'
+snippet messagehtml "$message(options) use html"
 this.$message({
   dangerouslyUseHTMLString: true,
   message: '<strong>这是 <i>HTML</i> 片段</strong>',
@@ -37,7 +37,7 @@ this.$message({
 })
 endsnippet
 
-snippet messagefull '$message(options) with full options'
+snippet messagefull "$message(options) with full options"
 const h = this.$createElement
 const vnodeMessage = h('p', null, [
   h('span', null, '内容可以是 '),
