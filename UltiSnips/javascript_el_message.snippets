@@ -2,11 +2,28 @@ extends javascript
 
 snippet message "$message(options) from element-ui"
 this.$message({
-  message: '这是一条成功消息',
   // success | warning | info | error
   type: 'success',
+  message: '这是一条成功消息',
 })
 endsnippet
+
+snippet messageerror "$message.error(options) from element-ui"
+this.$message({
+  // success | warning | info | error
+  type: 'error',
+  message: '这是一条错误消息',
+})
+endsnippet
+
+snippet messagewarn "$message.warning(options) from element-ui"
+this.$message({
+  // success | warning | info | error
+  type: 'waring',
+  message: '这是一条警告消息',
+})
+endsnippet
+
 
 snippet messagevnode "$message(options) use vnode"
 const h = this.$createElement
@@ -22,18 +39,18 @@ const vnodeMessage = h('p', null, [
 ])
 
 this.$message({
-  message: vnodeMessage,
   // success | warning | info | error
   type: 'success',
+  message: vnodeMessage,
 })
 endsnippet
 
 snippet messagehtml "$message(options) use html"
 this.$message({
-  dangerouslyUseHTMLString: true,
-  message: '<strong>这是 <i>HTML</i> 片段</strong>',
   // success | warning | info | error
   type: 'success',
+  dangerouslyUseHTMLString: true,
+  message: '<strong>这是 <i>HTML</i> 片段</strong>',
 })
 endsnippet
 
@@ -51,9 +68,9 @@ const vnodeMessage = h('p', null, [
 ])
 
 this.$message({
-  message: vnodeMessage,
   // success | warning | info | error
   type: 'success',
+  message: vnodeMessage,
   // 文字是否居中
   // center: false,
   // 是否显示关闭按钮

@@ -1,7 +1,7 @@
 this.$message({
-  message: '这是一条成功消息',
   // success | warning | info | error
   type: 'success',
+  message: '这是一条成功消息',
 })
 
 const h = this.$createElement
@@ -17,22 +17,22 @@ const vnodeMessage = h('p', null, [
 ])
 
 this.$message({
-  message: vnodeMessage,
   // success | warning | info | error
   type: 'success',
+  message: vnodeMessage,
 })
 
 this.$message({
+  // success | warning | info | error
+  type: 'success',
   dangerouslyUseHTMLString: true,
   message: '<strong>这是 <i>HTML</i> 片段</strong>',
-  // success | warning | info | error
-  type: 'success',
 })
 
 this.$message({
-  message: vnodeMessage,
   // success | warning | info | error
   type: 'success',
+  message: vnodeMessage,
   // 文字是否居中
   // center: false,
   // 是否显示关闭按钮
