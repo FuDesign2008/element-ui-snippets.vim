@@ -5,6 +5,7 @@ Snippets for element ui
 ## Next
 
 1. add snippets for element ui tags
+1. Typescript support
 
 ## 组件
 
@@ -65,7 +66,7 @@ Snippets for element ui
 
 ### Others
 
-- Dialog 对话框
+- Dialog 对话框✅
 - Tooltip 文字提示
 - Popover 弹出框
 - Card 卡片

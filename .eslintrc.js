@@ -21,6 +21,4 @@ module.exports = {
     // allow debugger during development
     'no-debugger':  'error' ,
   },
-
 }
-
