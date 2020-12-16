@@ -1,6 +1,5 @@
-extends javascript
 
-snippet alert "$alert(message, title, options) from element ui"
+snippet elalert "$alert(message, title, options) from element ui"
   const alertOptions = {
     confirmButtonText: '确定',
     cancelButtonText: '取消',
@@ -10,7 +9,7 @@ snippet alert "$alert(message, title, options) from element ui"
   this.$alert('内容 string | vnode', '标题名称' /*, alertOptions*/)
 endsnippet
 
-snippet confirm "$confirm(message, title, options) from element ui"
+snippet elconfirm "$confirm(message, title, options) from element ui"
   const confirmOptions = {
     confirmButtonText: '确定',
     cancelButtonText: '取消',
@@ -25,7 +24,7 @@ snippet confirm "$confirm(message, title, options) from element ui"
   }
 endsnippet
 
-snippet prompt "$prompt(message, title, options) from element ui"
+snippet elprompt "$prompt(message, title, options) from element ui"
   const promptOptions = {
     confirmButtonText: '确定',
     cancelButtonText: '取消',

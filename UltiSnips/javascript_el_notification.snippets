@@ -1,7 +1,6 @@
 
-extends javascript
 
-snippet notify "$notify(options) from element ui"
+snippet elnotify "$notify(options) from element ui"
   const notificationOptions = {
     title: '标题',
     message: '内容 string | vnode',
@@ -17,7 +16,7 @@ snippet notify "$notify(options) from element ui"
   this.$notify(notificationOptions)
 endsnippet
 
-snippet notification "{ Notification } from element-ui"
+snippet elnotification "{ Notification } from element-ui"
   import { Notification } from 'element-ui'
 
   const notificationOptions = {

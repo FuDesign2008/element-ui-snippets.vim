@@ -1,6 +1,6 @@
 extends javascript
 
-snippet message "$message(options) from element-ui"
+snippet elmessage "$message(options) from element-ui"
 this.$message({
   // success | warning | info | error
   type: 'success',
@@ -8,7 +8,7 @@ this.$message({
 })
 endsnippet
 
-snippet messageerror "$message.error(options) from element-ui"
+snippet elmessageerror "$message.error(options) from element-ui"
 this.$message({
   // success | warning | info | error
   type: 'error',
@@ -16,7 +16,7 @@ this.$message({
 })
 endsnippet
 
-snippet messagewarn "$message.warning(options) from element-ui"
+snippet elmessagewarn "$message.warning(options) from element-ui"
 this.$message({
   // success | warning | info | error
   type: 'warning',
@@ -25,7 +25,7 @@ this.$message({
 endsnippet
 
 
-snippet messagevnode "$message(options) use vnode"
+snippet elmessagevnode "$message(options) use vnode from element-ui"
 const h = this.$createElement
 const vnodeMessage = h('p', null, [
   h('span', null, '内容可以是 '),
@@ -45,7 +45,7 @@ this.$message({
 })
 endsnippet
 
-snippet messagehtml "$message(options) use html"
+snippet elmessagehtml "$message(options) use html from element-ui"
 this.$message({
   // success | warning | info | error
   type: 'success',
@@ -54,7 +54,7 @@ this.$message({
 })
 endsnippet
 
-snippet messagefull "$message(options) with full options"
+snippet elmessagefull "$message(options) with full options from element-ui"
 const h = this.$createElement
 const vnodeMessage = h('p', null, [
   h('span', null, '内容可以是 '),
