@@ -1,0 +1,55 @@
+extends vue
+
+snippet eldatet "el-date-picker with date and time"
+<el-date-picker
+  placeholder="选择日期时间"
+  v-model={ pickedDate }
+  type="datetime"
+  readonly={ false }
+  disabled={ false }
+  default-time="12:00:00"
+  onChange={ onDatePickerChange }
+  />
+endsnippet
+
+snippet eldateti "el-date-picker with date/time and picker-options"
+<el-date-picker
+  placeholder="选择日期时间"
+  v-model={ pickedDate }
+  type="datetime"
+  readonly={ false }
+  disabled={ false }
+  default-time="12:00:00"
+  align="right"
+  picker-options={ dateTimePickerOpitons }
+  onChange={ onDatePickerChange }
+  />
+endsnippet
+
+snippet eldatetim "el-date-picker with datetimerange"
+<el-date-picker
+  start-placeholder="开始日期"
+  range-separator="至"
+  end-placeholder="结束日期"
+  v-model={ startAndEndDate }
+  type="datetimerange"
+  readonly={ false }
+  disabled={ false }
+  onChange={ onDatePickerChange }
+  />
+endsnippet
+
+snippet eldatetime "el-date-picker with datetimerange and picker-options"
+<el-date-picker
+  start-placeholder="开始日期"
+  range-separator="至"
+  end-placeholder="结束日期"
+  v-model={ startAndEndDate }
+  type="datetimerange"
+  readonly={ false }
+  disabled={ false }
+  align="right"
+  picker-options={ startAndEndDatePickerOpitons }
+  onChange={ onDatePickerChange }
+  />
+endsnippet

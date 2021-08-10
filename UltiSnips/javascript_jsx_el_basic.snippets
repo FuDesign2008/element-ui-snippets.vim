@@ -1,0 +1,64 @@
+extends vue
+
+snippet elrow "Use el-row"
+<el-row gutter={ 20 }>
+  <el-col span={ 8 }><div>TODO</div></el-col>
+  <el-col span={ 8 }><div>TODO</div></el-col>
+  <el-col span={ 8 }><div>TODO</div></el-col>
+</el-row>
+endsnippet
+
+snippet elrowflex "Use el-row with flex"
+<el-row gutter={ 20 } type="flex" justify="center" align="middle">
+  <el-col span={ 8 }><div>TODO</div></el-col>
+  <el-col span={ 8 }><div>TODO</div></el-col>
+  <el-col span={ 8 }><div>TODO</div></el-col>
+</el-row>
+endsnippet
+
+snippet elheader "Use el-header and el-main"
+<el-container>
+  <el-header height="60px">Header</el-header>
+  <el-main>Main</el-main>
+</el-container>
+endsnippet
+
+snippet elheaderfooter "Use el-header, el-main and el-footer"
+<el-container>
+  <el-header height="60px">Header</el-header>
+  <el-main>Main</el-main>
+  <el-footer height="60px">Footer</el-footer>
+</el-container>
+endsnippet
+
+snippet elaside "Use el-aside and el-main"
+<el-container>
+  <el-aside width="300px">Aside</el-aside>
+  <el-main>Main</el-main>
+</el-container>
+endsnippet
+
+snippet elheaderaside "use el-header, el-aside and el-main"
+<el-container>
+  <el-header height="60px">Header</el-header>
+  <el-container>
+    <el-aside width="300px">Aside</el-aside>
+    <el-main>Main</el-main>
+  </el-container>
+</el-container>
+endsnippet
+
+snippet elheaderasidefooter "use el-header, el-aside, el-main and el-footer"
+<el-container>
+  <el-header height="60px">Header</el-header>
+  <el-container>
+    <el-aside width="300px">Aside</el-aside>
+    <el-container>
+      <el-main>Main</el-main>
+      <el-footer height="60px">Footer</el-footer>
+    </el-container>
+  </el-container>
+</el-container>
+endsnippet
+
+

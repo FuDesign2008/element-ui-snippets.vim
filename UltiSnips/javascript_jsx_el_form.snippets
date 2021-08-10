@@ -1,0 +1,43 @@
+extends vue
+
+snippet elformpwd "el-form with password"
+<el-form
+  ref="passwordForm"
+  model={ passwordForm }
+  rules={ passwordFormRules }
+  label-width="100px"
+  @submit.native.prevent
+  >
+  <el-form-item
+    label="密码"
+    prop="password">
+    <el-input
+      type="password"
+      v-model={ passwordForm.password }
+      auto-complete="off"
+      />
+  </el-form-item>
+  <el-form-item
+    label="确认密码"
+    prop="checkPassword"
+    >
+    <el-input
+      type="password"
+      v-model={ passwordForm.checkPassword }
+      auto-complete="off"
+      />
+  </el-form-item>
+  <el-form-item label="年龄" prop="age">
+    <el-input v-model.number="passwordForm.age" />
+  </el-form-item>
+  <el-form-item>
+    <el-button
+      type="primary"
+      onClick={ submitForm('passwordForm') }
+      >提交</el-button>
+    <el-button
+      onClick={ resetForm('passwordForm') }
+      >重置</el-button>
+  </el-form-item>
+</el-form>
+endsnippet

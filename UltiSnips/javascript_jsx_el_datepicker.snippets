@@ -1,0 +1,104 @@
+extends vue
+
+snippet eldate "el-date-picker"
+ <el-date-picker
+  placeholder="选择日期"
+  v-model={ pickedDate }
+  type="date"
+  readonly={ false }
+  disabled={ false }
+  onChange={ onDatePickerChange }
+  />
+endsnippet
+
+snippet eldatep "el-date-picker with picker-options"
+<el-date-picker
+  placeholder="选择日期"
+  v-model={ pickedDate }
+  type="date"
+  align="right"
+  picker-options={ datePickerOptions }
+  readonly={ false }
+  disabled={ false }
+  onChange={ onDatePickerChange }
+  />
+endsnippet
+
+snippet eldatepi "el-date-picker with type of week"
+<el-date-picker
+  placeholder="选择周"
+  v-model={ pickedWeek }
+  type="week"
+  format="yyyy 第 WW 周"
+  readonly={ false }
+  disabled={ false }
+  onChange={ onDatePickerChange }
+  />
+endsnippet
+
+snippet eldatepic "el-date-picker with type of month"
+<el-date-picker
+  placeholder="选择月"
+  v-model={ pickedMonth }
+  type="month"
+  readonly={ false }
+  disabled={ false }
+  onChange={ onDatePickerChange }
+  />
+endsnippet
+
+snippet eldatepick "el-date-picker with type of year"
+<el-date-picker
+  placeholder="选择年"
+  v-model={ pickedYear }
+  type="year"
+  readonly={ false }
+  disabled={ false }
+  onChange={ onDatePickerChange }
+  />
+endsnippet
+
+snippet eldatepicke "el-date-picker with multiple dates"
+ <el-date-picker
+  placeholder="选择一个或多个日期"
+  v-model={ pickedDates }
+  type="dates"
+  readonly={ false }
+  disabled={ false }
+  onChange={ onDatePickerChange }
+  />
+endsnippet
+
+snippet eldatepickers "el-date-picker with start and end date"
+ <el-date-picker
+  start-placeholder="开始日期"
+  range-separator="至"
+  end-placeholder="结束日期"
+  v-model={ startAndEndDate }
+  type="daterange"
+  readonly={ false }
+  disabled={ false }
+  onChange={ onDatePickerChange }
+  />
+endsnippet
+
+snippet eldatepickerso "el-date-picker with start/end date and picker-options"
+ <el-date-picker
+  start-placeholder="开始日期"
+  range-separator="至"
+  end-placeholder="结束日期"
+  v-model={ startAndEndDate }
+  type="daterange"
+  align="right"
+  unlink-panels
+  picker-options={ dateRangePickerOptions }
+  readonly={ false }
+  disabled={ false }
+  onChange={ onDatePickerChange }
+  />
+endsnippet
+
+
+
+
+

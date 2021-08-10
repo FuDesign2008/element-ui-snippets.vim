@@ -1,0 +1,45 @@
+extends vue
+
+
+snippet eltabs "el-tabs" b
+  <el-tabs
+    v-model={ activeName }
+    type="default | card | border-card"
+    tab-position="top | right | bottom | left"
+    onTabClick={ handleClick }
+  >
+    <el-tab-pane
+      label="用户管理"
+      name="first"
+    >
+      用户管理
+    </el-tab-pane>
+    <el-tab-pane
+      name="second"
+    >
+      <span slot="label"><i class="el-icon-date" />配置管理</span>
+      配置管理
+    </el-tab-pane>
+    <el-tab-pane
+      label="角色管理"
+      name="third"
+    >
+      角色管理
+    </el-tab-pane>
+    <el-tab-pane
+      label="定时任务补偿"
+      name="fourth"
+    >
+      定时任务补偿
+    </el-tab-pane>
+  </el-tabs>
+endsnippet
+
+snippet eltabsedit "el-tabs with editable attribute" b
+    <el-tabs
+      v-model={ editableTabsValue }
+      type="card"
+      editable
+      onEdit={ handleTabsEdit }
+    >
+endsnippet

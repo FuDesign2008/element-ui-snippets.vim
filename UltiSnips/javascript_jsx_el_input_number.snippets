@@ -1,0 +1,28 @@
+extends vue
+
+snippet elinputnum "el-input-number with basic attributes"
+ <el-input-number
+    v-model={ inputNumber }
+    onChange={ onInputNumberChange }
+    disabled={ false }
+    step={ 1 }
+    min={ 1 }
+    max={ 10 }
+    label="描述文字"
+  />
+endsnippet
+
+snippet elinputnumber "el-input-number with most attributes"
+ <el-input-number
+    v-model={ inputNumber }
+    onChange={ onInputNumberChange }
+    disabled={ false }
+    step={ 1 }
+    min={ 1 }
+    max={ 10 }
+    precision={ 2 }
+    size="small"
+    controls-position="right"
+    label="描述文字"
+  />
+endsnippet

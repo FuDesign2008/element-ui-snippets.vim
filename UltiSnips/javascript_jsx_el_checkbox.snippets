@@ -1,0 +1,110 @@
+extends vue
+
+snippet elcheckbox "el-checkbox"
+<el-checkbox
+  v-model={ isChecked }
+  disabled={ false }
+  onChange={ onChange }
+  >备选项</el-checkbox>
+endsnippet
+
+snippet elcheckboxgroup "el-checkbox-group"
+<el-checkbox-group
+  v-model={ checkList }
+  min={ 1 }
+  max={ 3 }
+  onChange={ onChange }
+  >
+  <el-checkbox
+    label="value1
+    >复选框1</el-checkbox>
+  <el-checkbox
+    label="value2"
+    >复选框2</el-checkbox>
+  <el-checkbox
+    label="value3"
+    disabled
+    >复选框禁用</el-checkbox>
+  <el-checkbox
+    label="value4"
+    disabled
+    >选中并禁用</el-checkbox>
+</el-checkbox-group>
+endsnippet
+
+snippet elcheckboxfor "el-checkbox-group with v-for"
+<el-checkbox-group
+  v-model={ checkList }
+  min={ 1 }
+  max={ 3 }
+  onChange={ onChange }
+  >
+  {
+    checkOptions.map(item => {
+     return (
+     <el-checkbox
+      label={ item.value }
+      key={ item.value }
+      disabled={ item.disabled }
+     >
+     {item.text}
+     </el-checkbox>
+     )
+  })
+  }
+</el-checkbox-group>
+endsnippet
+
+snippet elcheckboxbutton "el-checkbox-group as button"
+<el-checkbox-group
+  v-model={ checkList }
+  min={ 1 }
+  max={ 3 }
+  size="small"
+  onChange={ onChange }
+  >
+  <el-checkbox-button
+    label="value1
+    >复选框1</el-checkbox-button>
+  <el-checkbox-button
+    label="value2"
+    >复选框2</el-checkbox-button>
+  <el-checkbox-button
+    label="value3"
+    disabled
+    >复选框禁用</el-checkbox-button>
+  <el-checkbox-button
+    label="value4"
+    disabled
+    >选中并禁用</el-checkbox-button>
+</el-checkbox-group>
+endsnippet
+
+snippet elcheckboxbuttonfor "el-checkbox-group as button with v-for"
+<el-checkbox-group
+  v-model={ checkList }
+  min={ 1 }
+  max={ 3 }
+  size="small"
+  onChange={ onChange }
+  >
+  {
+    checkOptions.map(item => {
+     return (
+     <el-checkbox-button
+      label={ item.value }
+      key={ item.value }
+      disabled={ item.disabled }
+     >
+     {item.text}
+     </el-checkbox-button>
+     )
+  })
+  }
+</el-checkbox-group>
+endsnippet
+
+
+
+
+
