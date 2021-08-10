@@ -1,0 +1,44 @@
+extends vue
+
+snippet elprogress "el-progress"
+  <el-progress
+    percentage={ 80 }
+    color="#8e71c7"
+  />
+endsnippet
+
+snippet elprogressstatus "el-progress with status"
+  <el-progress
+    percentage={ 50 }
+    status="success | exception"
+  />
+endsnippet
+
+snippet elprogresstext "el-progress with text"
+  <el-progress
+    percentage={ 50 }
+    status="text"
+  >
+    loading....
+  </el-progress>
+endsnippet
+
+snippet elprogressinside "el-progress with text-inside attribute"
+  <el-progress
+    text-inside={ true }
+    stroke-width={ 18 }
+    percentage={ 80 }
+    color="rgba(142, 113, 199, 0.7)"
+  />
+endsnippet
+
+snippet elprogresscircle "el-progress with circle type"
+  <el-progress
+    type="circle"
+    percentage={ 100 }
+    color="#8e71c7"
+    status="text"
+  >
+    Done
+  </el-progress>
+endsnippet

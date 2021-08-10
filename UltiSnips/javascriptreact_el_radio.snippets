@@ -1,0 +1,46 @@
+extends vue
+
+snippet elradio "el-radio"
+<el-radio
+  v-model={ radio }
+  label={ value }
+  disabled={ false }
+  border={ false }
+  onChange={ onChange }
+  >备选项</el-radio>
+endsnippet
+
+snippet elradiogroup "el-radio-group"
+<el-radio-group
+  v-model={ selectedValue }
+  onChange={ onChange }
+  >
+  <el-radio
+    label={ value1 }
+    >备选项1</el-radio>
+  <el-radio
+    label={ value2 }
+    >备选项2</el-radio>
+  <el-radio
+    label={ value4 }
+    >备选项3</el-radio>
+</el-radio-group>
+endsnippet
+
+snippet elradiobutton "el-radio-button as group"
+<el-radio-group
+  v-model={ selectedValue }
+  onChange={ onChange }
+  size="small"
+  >
+  <el-radio-button
+    label={ value1 }
+    >备选项1</el-radio-button>
+  <el-radio-button
+    label={ value2 }
+    >备选项2</el-radio-button>
+  <el-radio-button
+    label={ value4 }
+    >备选项3</el-radio-button>
+</el-radio-group>
+endsnippet

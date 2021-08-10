@@ -1,0 +1,63 @@
+extends vue
+
+snippet eltimeselect "el-time-select"
+<el-time-select
+  placeholder="请选择时间"
+  v-model={ this.selectedTime }
+  :picker-options="{
+    start: '08:30',
+    step: '00:15',
+    end: '18:30'
+  }"
+  onChange={ this.onTimeSelectChange }
+  />
+endsnippet
+
+snippet eltimeselects "el-time-select start and end times"
+<el-time-select
+  placeholder="起始时间"
+  v-model={ this.startTime }
+  :picker-options="{
+    start: '08:30',
+    step: '00:15',
+    end: '18:30'
+  }"
+  onChange={ this.onStartTimeChange }
+  />
+<el-time-select
+  placeholder="结束时间"
+  v-model={ this.endTime }
+  :picker-options="{
+    start: '08:30',
+    step: '00:15',
+    end: '18:30',
+    minTime: startTime
+  }"
+  onChange={ this.onEndTimeChange }
+  />
+endsnippet
+
+snippet eltimepicker "el-time-picker"
+<el-time-picker
+  placeholder="任意时间点"
+  v-model={ this.pickedTime }
+  :picker-options="{
+    selectableRange: '18:30:00 - 20:30:00'
+  }"
+  arrow-control={ false }
+  onChange={ this.onTimeSelectChange }
+  />
+endsnippet
+
+snippet eltimepickers "el-time-picker with range"
+<el-time-picker
+  is-range={ true }
+  arrow-control={ false }
+  v-model={ this.startAndEndTime }
+  range-separator="至"
+  start-placeholder="开始时间"
+  end-placeholder="结束时间"
+  placeholder="选择时间范围"
+  onChange={ this.onTimePickerChange }
+  />
+endsnippet

@@ -1,0 +1,52 @@
+extends vue
+
+snippet elrate "elrate"
+<el-rate
+  v-model={ rateValue }
+  disabled={ false }
+  show-score="true"
+  score-template="{value}"
+  text-color="#ff9900"
+  onChange={ onRateChange }
+  />
+endsnippet
+
+snippet elratecolor "elrate with colors"
+<el-rate
+  v-model={ rateValue }
+  colors={ ['#99A9BF', '#F7BA2A', '#FF9900'] }
+  disabled={ false }
+  show-score="true"
+  score-template="{value}"
+  text-color="#ff9900"
+  onChange={ onRateChange }
+  />
+endsnippet
+
+snippet elratetext "elrate with show-text"
+<el-rate
+  v-model={ rateValue }
+  show-text
+  texts={ ['极差', '失望', '一般', '满意', '惊喜'] }
+  disabled={ false }
+  show-score="false"
+  score-template="{value}"
+  text-color="#ff9900"
+  onChange={ onRateChange }
+  />
+endsnippet
+
+snippet elrateicon "elrate with custom icons"
+<el-rate
+  v-model={ rateValue }
+  icon-classes={ ['icon-rate-face-1', 'icon-rate-face-2', 'icon-rate-face-3'] }
+  void-icon-class="icon-rate-face-off"
+  colors={ ['#99A9BF', '#F7BA2A', '#FF9900'] }
+  disabled={ false }
+  show-score="false"
+  score-template="{value}"
+  text-color="#ff9900"
+  onChange={ onRateChange }
+  />
+endsnippet
+
